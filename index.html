@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Real Face · afiisyhh_</title>
+  <meta name="description" content="Portfolio dengan nuansa sendu dan hangat ala Nadhif Basalamah.">
+  <meta name="keywords" content="portfolio, real face, nadhif basalamah, afiisyhh_">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/favicon.png" rel="apple-touch-icon">
+
+  <!-- Fonts - Programmer Aesthetic -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=JetBrains+Mono:wght@300;400;500;600;700&family=Roboto+Mono:wght@300;400;500&display=swap"
+    rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+
+  <!-- Main CSS File - Real Face Theme -->
+  <link href="assets/css/main.css" rel="stylesheet">
+</head>
+
+<body class="index-page">
+
+  <!-- ============================================= -->
+  <!-- THEME SWITCHER DROPDOWN -->
+  <!-- ============================================= -->
+  <div class="theme-switcher-wrapper">
+    <button class="theme-dropdown-btn" id="themeDropdownToggle">
+      <i class="bi bi-palette-fill"></i>
+      <span id="currentThemeLabel">Dark</span>
+      <i class="bi bi-chevron-down"></i>
+    </button>
+    <ul class="theme-dropdown-menu" id="themeDropdownMenu">
+      <li><button class="theme-option" data-theme="light"><i class="bi bi-sun-fill"></i> Light</button></li>
+      <li><button class="theme-option active-theme" data-theme="dark"><i class="bi bi-moon-fill"></i> Dark</button></li>
+      <li><button class="theme-option" data-theme="system"><i class="bi bi-display"></i> System</button></li>
+      <li><button class="theme-option" data-theme="custom"><i class="bi bi-gear-fill"></i> Custom</button></li>
+    </ul>
+    <!-- Panel Custom Theme (Hidden by default) -->
+    <div class="custom-theme-panel" id="customThemePanel" style="display: none;">
+      <label>Background Color</label>
+      <input type="color" id="customBgColor" value="#081018">
+      <label>Text Color</label>
+      <input type="color" id="customTextColor" value="#eff3f5">
+      <label>Accent Color</label>
+      <input type="color" id="customAccentColor" value="#8fe7c5">
+      <button id="applyCustomTheme">Terapkan Custom</button>
+    </div>
+  </div>
+
+  <!-- ============================================= -->
+  <!-- MUSIC PLAYER - NADHIF BASALAMAH PLAYLIST -->
+  <!-- ============================================= -->
+  <div class="music-player">
+    <div class="music-toggle paused" id="musicToggle">
+      <i class="bi bi-play-circle-fill"></i>
+    </div>
+  </div>
+
+  <div id="musicOverlay" class="music-overlay" style="display:none;">
+    <div class="music-overlay-card">
+      <button class="music-overlay-close" id="musicOverlayClose" aria-label="Close">
+        <i class="bi bi-x-lg"></i>
+      </button>
+      <div class="music-overlay-cover">
+        <img id="musicOverlayCover" src="assets/img/favicon.png" alt="Cover" />
+      </div>
+      <div class="music-overlay-info">
+        <div class="music-overlay-title" id="musicOverlayTitle">Judul Lagu</div>
+        <div class="music-overlay-controls">
+          <button id="musicPrev" class="music-overlay-btn">
+            <i class="bi bi-skip-start-fill"></i>
+          </button>
+          <button id="musicOverlayPlay" class="music-overlay-btn">
+            <i class="bi bi-play-fill"></i>
+          </button>
+          <button id="musicNext" class="music-overlay-btn">
+            <i class="bi bi-skip-end-fill"></i>
+          </button>
+        </div>
+        <div class="music-overlay-progress">
+          <span id="musicCurrentTime">0:00</span>
+          <input type="range" id="musicProgress" min="0" max="100" value="0">
+          <span id="musicDuration">0:00</span>
+        </div>
+        <div class="music-overlay-volume">
+          <i class="bi bi-volume-down-fill"></i>
+          <input type="range" id="volumeSlider" min="0" max="1" step="0.01" value="0.3">
+          <i class="bi bi-volume-up-fill"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============================================= -->
+  <!-- HEADER -->
+  <!-- ============================================= -->
+  <header id="header" class="header d-flex align-items-center fixed-top">
+    <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
+      <a href="index.html" class="logo d-flex align-items-center">
+        <img src="assets/img/favicon.png" alt="Real Face">
+        <h1 class="sitename">afiisyhh_</h1>
+      </a>
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="resume.html">Resume</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="portfolio.html">Portfolio</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ============================================= -->
+  <!-- MAIN CONTENT -->
+  <!-- ============================================= -->
+  <main class="main">
+
+    <!-- Hero Section - Real Face Mood -->
+    <section id="hero" class="hero section">
+      <!-- Background Video -->
+      <video autoplay muted loop playsinline id="hero-video">
+        <source src="assets/video/real-face-bg.mp4" type="video/mp4">
+        <!-- Fallback image jika video gagal dimuat -->
+        <img src="assets/img/favicon.jpg" alt="Real Face Background">
+      </video>
+      <div class="hero-overlay"></div>
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+        <h2>afiisyhh_</h2>
+        <p>I'm <span class="typed"
+            data-typed-items="a Fullstack Developer, a Bug Hunter, a System Thinker, a Late-Night Coder, a Logic Builder, Real Face"></span><span
+            class="typed-cursor typed-cursor--blink"></span></p>
+        <div class="social-links">
+          <a href="https://www.youtube.com/@PachinHytamm" target="_blank" rel="noopener">
+            <i class="bi bi-youtube"></i>
+          </a>
+          <a href="https://www.tiktok.com/@pachin_hytam" target="_blank" rel="noopener">
+            <i class="bi bi-tiktok"></i>
+          </a>
+          <a href="https://www.instagram.com/pachinhytam/" target="_blank" rel="noopener">
+            <i class="bi bi-instagram"></i>
+          </a>
+          <a href="https://github.com/pachinhytam" target="_blank" rel="noopener">
+            <i class="bi bi-github"></i>
+          </a>
+        </div>
+      </div>
+    </section><!-- /Hero Section -->
+
+  </main>
+
+  <!-- ============================================= -->
+  <!-- FOOTER - NADHIF VIBE QUOTE -->
+  <!-- ============================================= -->
+  <footer id="footer" class="footer">
+    <div class="container">
+      <h3 class="sitename">afiisyhh_</h3>
+      <p>"Masih belajar, masih bertumbuh, masih berjuang."
+      </p>
+      <div class="social-links d-flex justify-content-center">
+        <a href="https://www.youtube.com/@PachinHytamm" target="_blank" rel="noopener">
+          <i class="bi bi-youtube"></i>
+        </a>
+        <a href="https://www.tiktok.com/@pachin_hytam" target="_blank" rel="noopener">
+          <i class="bi bi-tiktok"></i>
+        </a>
+        <a href="https://www.instagram.com/pachinhytam/" target="_blank" rel="noopener">
+          <i class="bi bi-instagram"></i>
+        </a>
+        <a href="https://github.com/pachinhytam" target="_blank" rel="noopener">
+          <i class="bi bi-github"></i>
+        </a>
+      </div>
+      <div class="copyright">
+        <span>Copyright</span> <strong class="px-1 sitename">afiisyhh_</strong> <span>All Rights Reserved</span>
+      </div>
+      <div class="credits">
+        Designed & Developed by <strong style="color: var(--accent-color);">afiisyhh_</strong>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scroll Top Button -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center">
+    <i class="bi bi-arrow-up-short"></i>
+  </a>
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/typed.js/typed.umd.js"></script>
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+
+  <!-- Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Services · Real Face · afiisyhh_</title>
+  <meta name="description" content="Layanan yang ditawarkan afiisyhh_ - Dari web development hingga IoT.">
+  <meta name="keywords" content="services, layanan, web development, mobile app, ui ux, real face">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/favicon.png" rel="apple-touch-icon">
+
+  <!-- Fonts - Programmer Aesthetic -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=JetBrains+Mono:wght@300;400;500;600;700&family=Roboto+Mono:wght@300;400;500&display=swap"
+    rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+
+  <!-- Main CSS File - Real Face Theme -->
+  <link href="assets/css/main.css" rel="stylesheet">
+</head>
+
+<body class="services-page">
+
+  <!-- ============================================= -->
+  <!-- THEME SWITCHER DROPDOWN -->
+  <!-- ============================================= -->
+  <div class="theme-switcher-wrapper">
+    <button class="theme-dropdown-btn" id="themeDropdownToggle">
+      <i class="bi bi-palette-fill"></i>
+      <span id="currentThemeLabel">Dark</span>
+      <i class="bi bi-chevron-down"></i>
+    </button>
+    <ul class="theme-dropdown-menu" id="themeDropdownMenu">
+      <li><button class="theme-option" data-theme="light"><i class="bi bi-sun-fill"></i> Light</button></li>
+      <li><button class="theme-option active-theme" data-theme="dark"><i class="bi bi-moon-fill"></i> Dark</button></li>
+      <li><button class="theme-option" data-theme="system"><i class="bi bi-display"></i> System</button></li>
+      <li><button class="theme-option" data-theme="custom"><i class="bi bi-gear-fill"></i> Custom</button></li>
+    </ul>
+    <!-- Panel Custom Theme (Hidden by default) -->
+    <div class="custom-theme-panel" id="customThemePanel" style="display: none;">
+      <label>Background Color</label>
+      <input type="color" id="customBgColor" value="#081018">
+      <label>Text Color</label>
+      <input type="color" id="customTextColor" value="#eff3f5">
+      <label>Accent Color</label>
+      <input type="color" id="customAccentColor" value="#8fe7c5">
+      <button id="applyCustomTheme">Terapkan Custom</button>
+    </div>
+  </div>
+
+  <!-- ============================================= -->
+  <!-- MUSIC PLAYER - NADHIF BASALAMAH PLAYLIST -->
+  <!-- ============================================= -->
+  <div class="music-player">
+    <div class="music-toggle paused" id="musicToggle">
+      <i class="bi bi-play-circle-fill"></i>
+    </div>
+  </div>
+
+  <div id="musicOverlay" class="music-overlay" style="display:none;">
+    <div class="music-overlay-card">
+      <button class="music-overlay-close" id="musicOverlayClose" aria-label="Close"><i class="bi bi-x-lg"></i></button>
+      <div class="music-overlay-cover">
+        <img id="musicOverlayCover" src="assets/img/favicon.png" alt="Cover" />
+      </div>
+      <div class="music-overlay-info">
+        <div class="music-overlay-title" id="musicOverlayTitle">Judul Lagu</div>
+        <div class="music-overlay-controls">
+          <button id="musicPrev" class="music-overlay-btn"><i class="bi bi-skip-start-fill"></i></button>
+          <button id="musicOverlayPlay" class="music-overlay-btn"><i class="bi bi-play-fill"></i></button>
+          <button id="musicNext" class="music-overlay-btn"><i class="bi bi-skip-end-fill"></i></button>
+        </div>
+        <div class="music-overlay-progress">
+          <span id="musicCurrentTime">0:00</span>
+          <input type="range" id="musicProgress" min="0" max="100" value="0">
+          <span id="musicDuration">0:00</span>
+        </div>
+
+        <div class="music-overlay-volume">
+          <i class="bi bi-volume-down-fill"></i>
+          <input type="range" id="volumeSlider" min="0" max="1" step="0.01" value="0.3">
+          <i class="bi bi-volume-up-fill"></i>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- ============================================= -->
+  <!-- HEADER -->
+  <!-- ============================================= -->
+  <header id="header" class="header d-flex align-items-center fixed-top">
+    <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
+
+      <a href="index.html" class="logo d-flex align-items-center">
+        <img src="assets/img/favicon.png" alt="Real Face">
+        <h1 class="sitename">afiisyhh_</h1>
+      </a>
+
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="resume.html">Resume</a></li>
+          <li><a href="services.html" class="active">Services</a></li>
+          <li><a href="portfolio.html">Portfolio</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+
+    </div>
+  </header>
+
+  <main class="main">
+
+    <!-- Page Title -->
+    <div class="page-title" data-aos="fade">
+      <div class="heading">
+        <div class="container">
+          <div class="row d-flex justify-content-center text-center">
+            <div class="col-lg-8">
+              <h1>Layanan</h1>
+              <p class="mb-0">“Saya mungkin tidak tahu segalanya, tapi setiap hal yang saya pahami akan saya kerjakan
+                secara maksimal, bukan setengah-setengah.”</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <nav class="breadcrumbs">
+        <div class="container">
+          <ol>
+            <li><a href="index.html">Home</a></li>
+            <li class="current">Services</li>
+          </ol>
+        </div>
+      </nav>
+    </div><!-- End Page Title -->
+
+    <!-- Services Section -->
+    <section id="services" class="services section">
+
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Yang Bisa Kulakukan</h2>
+        <div><span>Layanan</span> <span class="description-title">yang Kutawarkan</span></div>
+      </div>
+
+      <div class="container">
+        <div class="row gy-4">
+
+          <!-- Web Development -->
+          <div class="col-lg-4 col-md-6" data-aos="fade-up">
+            <div class="service-item position-relative">
+              <div class="icon"><i class="bi bi-window"></i></div>
+              <h3>Web Development</h3>
+              <p>
+                Membangun website yang tidak hanya berfungsi, tapi juga punya karakter.
+                Responsif di semua perangkat, cepat diakses, dan mudah dikelola.
+              </p>
+              <a href="https://wa.me/6282114020902" class="stretched-link" target="_blank"></a>
+            </div>
+          </div>
+
+          <!-- Mobile App -->
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+            <div class="service-item position-relative">
+              <div class="icon"><i class="bi bi-phone"></i></div>
+              <h3>Mobile App</h3>
+              <p>
+                Mengembangkan aplikasi mobile sederhana yang ringan, intuitif, dan sesuai kebutuhanmu—tanpa ribet.
+              </p>
+              <a href="https://wa.me/6282114020902" class="stretched-link" target="_blank"></a>
+            </div>
+          </div>
+
+          <!-- UI/UX Design -->
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+            <div class="service-item position-relative">
+              <div class="icon"><i class="bi bi-palette"></i></div>
+              <h3>UI/UX Design</h3>
+              <p>
+                Mendesain antarmuka yang nyaman dipandang dan mudah digunakan. Karena pengalaman pengguna adalah
+                segalanya.
+              </p>
+              <a href="https://wa.me/6282114020902" class="stretched-link" target="_blank"></a>
+            </div>
+          </div>
+
+          <!-- Backend & Database -->
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+            <div class="service-item position-relative">
+              <div class="icon"><i class="bi bi-database"></i></div>
+              <h3>Backend & Database</h3>
+              <p>
+                Membangun sistem di balik layar: API, manajemen data, dan logika bisnis yang membuat aplikasimu hidup.
+              </p>
+              <a href="https://wa.me/6282114020902" class="stretched-link" target="_blank"></a>
+            </div>
+          </div>
+
+          <!-- Website Maintenance -->
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
+            <div class="service-item position-relative">
+              <div class="icon"><i class="bi bi-tools"></i></div>
+              <h3>Website Maintenance</h3>
+              <p>
+                Merawat dan memperbarui website yang sudah ada—memastikan semuanya tetap berjalan mulus dari waktu ke
+                waktu.
+              </p>
+              <a href="https://wa.me/6282114020902" class="stretched-link" target="_blank"></a>
+            </div>
+          </div>
+
+          <!-- IoT Development -->
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="500">
+            <div class="service-item position-relative">
+              <div class="icon"><i class="bi bi-cpu"></i></div>
+              <h3>IoT Development</h3>
+              <p>
+                Menghubungkan perangkat fisik ke dunia digital. Monitoring, otomasi, dan kontrol berbasis ESP32.
+              </p>
+              <a href="https://wa.me/6282114020902" class="stretched-link" target="_blank"></a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </section><!-- /Services Section -->
+
+  </main>
+
+  <!-- ============================================= -->
+  <!-- FOOTER - NADHIF VIBE QUOTE -->
+  <!-- ============================================= -->
+  <footer id="footer" class="footer">
+    <div class="container">
+      <h3 class="sitename">afiisyhh_</h3>
+      <p>"Masih belajar, masih bertumbuh, masih berjuang.
+        "</p>
+
+      <div class="social-links d-flex justify-content-center">
+        <a href="https://www.youtube.com/@AlfiSyahDewiRisgi" target="_blank" rel="noopener"><i
+            class="bi bi-youtube"></i></a>
+        <a href="https://www.tiktok.com/@alsydrs" target="_blank" rel="noopener"><i class="bi bi-tiktok"></i></a>
+        <a href="https://www.instagram.com/afiisyhh_/" target="_blank" rel="noopener"><i
+            class="bi bi-instagram"></i></a>
+        <a href="https://github.com/AlsyDewiGirl" target="_blank" rel="noopener"><i class="bi bi-github"></i></a>
+      </div>
+
+      <div class="copyright">
+        <span>Copyright</span> <strong class="px-1 sitename">afiisyhh_</strong> <span>All Rights Reserved</span>
+      </div>
+      <div class="credits">
+        Designed & Developed by <strong style="color: var(--accent-color);">afiisyhh_</strong>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center">
+    <i class="bi bi-arrow-up-short"></i>
+  </a>
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/typed.js/typed.umd.js"></script>
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+
+  <!-- Main JS File - Includes Music Player & Playlist Logic -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
